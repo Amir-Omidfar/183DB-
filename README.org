@@ -4,6 +4,9 @@
 * Goal / Tasks
   - WE NEED TO START ORDERING SHIT
   - ALWAYS GO TO OFFICE HOURS
+* Mathematical Derivation
+  - Size of the current quadcopter
+  - Start having some shit on paper so we can ask more solid question during office hours
 * Project plan
   | Milestone(s)                | Demonstration                                            |
   |-----------------------------+----------------------------------------------------------|
@@ -17,7 +20,4 @@
   | Controller Design           | Show how quadcopter reacts with different controllers    |
   | End-to-end testing          | Gather experimental results that supports our conclusion |
   | Documentation               | Document all our work                                    |
-* Mathematical Derivation
-  - Size of the current quadcopter
-  - Start having some shit on paper so we can ask more solid question during office hours
 
