@@ -1,2 +1,0 @@
-# 183DB-
-Capstone Project 
