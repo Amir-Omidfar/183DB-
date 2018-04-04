@@ -1,6 +1,7 @@
 * General Resources
   - Professor Office Hours: ? I sent an email inquiry
   - [[https://drive.google.com/drive/u/0/folders/1Yxj9OBGIWcbHoHPgwoU0kEoxn_60bCrN][google drive folder]]
+  - [[https://www.overleaf.com/15319132wvnjrthtfxrp][overleaf latex]]
 * Goal / Tasks
   - WE NEED TO START ORDERING SHIT
   - ALWAYS GO TO OFFICE HOURS
