@@ -2,6 +2,7 @@
   - Professor Office Hours: ? I sent an email inquiry
   - [[https://drive.google.com/drive/u/0/folders/1Yxj9OBGIWcbHoHPgwoU0kEoxn_60bCrN][google drive folder]]
   - [[https://www.overleaf.com/15319132wvnjrthtfxrp][overleaf latex]]
+  - [[https://ocw.mit.edu/courses/mechanical-engineering/2-003sc-engineering-dynamics-fall-2011/newton2019s-laws-vectors-and-reference-frames/][mit dynamic course]]
 * Goal / Tasks
   - WE NEED TO START ORDERING SHIT
   - ALWAYS GO TO OFFICE HOURS
@@ -21,4 +22,17 @@
   | Controller Design           | Show how quadcopter reacts with different controllers    |
   | End-to-end testing          | Gather experimental results that supports our conclusion |
   | Documentation               | Document all our work                                    |
+
+* Research Online
+** Model  
+   1) Describe the motion
+      - assign a coordination system
+   2) Apply physical law / draw free body diagram
+      - F = ma
+      - To draw a free body diagram
+	+ draw forces in direction they act
+	+ assume x and x' is positive values
+	+ deduce signs from direction of arrow
+	
+   3) 
 
