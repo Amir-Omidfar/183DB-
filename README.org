@@ -1,6 +1,6 @@
 * General Resources
   - Professor Office Hours: ? I sent an email inquiry
-  - [[https://drive.google.com/drive/u/0/folders/1Yxj9OBGIWcbHoHPgwoU0kEoxn_60bCrN][google drive folder]]
+  - [[https://drive.google.com/drive/folders/1oTfQlVWcGNcjBcGgUbyTBhJVp0DoDn2w][google drive folder]]
   - [[https://www.overleaf.com/15319132wvnjrthtfxrp][overleaf latex]]
   - [[https://ocw.mit.edu/courses/mechanical-engineering/2-003sc-engineering-dynamics-fall-2011/newton2019s-laws-vectors-and-reference-frames/][mit dynamic course]]
 * Goal / Tasks
@@ -9,6 +9,8 @@
 * Mathematical Derivation
   - Size of the current quadcopter
   - Start having some shit on paper so we can ask more solid question during office hours
+** Free Body Diagram
+** Inertial Frame vs Body Frame
 * Project plan
   | Milestone(s)                | Demonstration                                            |
   |-----------------------------+----------------------------------------------------------|
