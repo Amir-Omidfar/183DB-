@@ -3,6 +3,7 @@
   - [[https://drive.google.com/drive/folders/1oTfQlVWcGNcjBcGgUbyTBhJVp0DoDn2w][google drive folder]]
   - [[https://www.overleaf.com/15319132wvnjrthtfxrp][overleaf latex]]
   - [[https://ocw.mit.edu/courses/mechanical-engineering/2-003sc-engineering-dynamics-fall-2011/newton2019s-laws-vectors-and-reference-frames/][mit dynamic course]]
+  - [[http://www.es.ele.tue.nl/education/5HC99/wiki/images/4/42/RigidBodyDynamics.pdf][Inertial/Body frame, Rotation Matrix]]
 * Goal / Tasks
   - WE NEED TO START ORDERING SHIT
   - ALWAYS GO TO OFFICE HOURS
