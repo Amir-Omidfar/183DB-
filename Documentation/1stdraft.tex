@@ -1,0 +1,188 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University Assignment Title Page 
+% LaTeX Template
+% Version 1.0 (27/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+% Instructions for using this template:
+% This title page is capable of being compiled as is. This is not useful for 
+% including it in another document. To do this, you have two options: 
+%
+% 1) Copy/paste everything between \begin{document} and \end{document} 
+% starting at \begin{titlepage} and paste this into another LaTeX file where you 
+% want your title page.
+% OR
+% 2) Remove everything outside the \begin{titlepage} and \end{titlepage} and 
+% move this file to the same directory as the LaTeX file you wish to add it to. 
+% Then add \input{./title_page_1.tex} to your LaTeX file where you want your
+% title page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\title{Title page with logo}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+% My Packpage 
+\usepackage{glossaries}
+\usepackage{bm}
+\usepackage{mathtools}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\newglossaryentry{latex}
+{
+    name=latex,
+    description={Is a mark up language specially suited 
+    for scientific documents}
+}
+\newacronym{gcd}{GCD}{Greatest Common Divisor}
+\makeglossaries
+\begin{document}
+\begin{titlepage}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+\center % Center everything on the page
+\textsc{\LARGE UCLA }\\[1.5cm] % Name of your university/college
+\textsc{\Large Robotics Design Capstone}\\[0.5cm] % Major heading such as course name
+\textsc{\large 183DB }\\[0.5cm] % Minor heading such as course title
+\HRule \\[0.4cm]
+{ \huge \bfseries Off center spinning mass controller for Quad Copters}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+Lin \textsc{Li} % Your name
+\\
+Angel \textsc{} % Your name
+\\
+Wilson \textsc{} % Your name
+\\
+Amirali \textsc{Omidfar} % Your name
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Professor:} \\
+Ankur \textsc{Metha} % Supervisor's Name
+\end{flushright}
+\end{minipage}\\[2cm]
+{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+\includegraphics[scale=0.2]{UCLA_Logo.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
+%----------------------------------------------------------------------------------------
+\vfill % Fill the rest of the page with whitespace
+\end{titlepage}
+\begin{abstract}
+Your abstract.
+\end{abstract}
+\section{Symbols}
+Here is a list of all symbols used in this paper:
+\\
+\begin{tabular}{c p{1\textwidth}}
+  $\bm{p} = \begin{bmatrix}x \\ y \\ z \end{bmatrix}$ & linear position vectors \\
+  $\bm{q} = \begin{bmatrix} q_r \\ q_i \\ q_j \\ q_k \end{bmatrix}$ & angular orientation vectors in quaternion \\
+  $\bm{F_{T}}$ & thrust force \\
+  $\bm{F_{G}}$ & gravitational force \\  
+  $\bm{F_{S}}$ & reaction force acted on the surface \\
+  $\bm{\tau_{S}}$ & reaction torque acted on the surface \\
+  $\bm{\tau_{M}}$ & torque introduced by the off-center mass \\
+  $m_b$ & mass of the body \\
+  $m_c$ & mass of the controller \\
+  $S_x, C_x, T_x$ & $\sin(x), \cos(x), \tan(x)$ respectively \\
+\end{tabular}\\
+% \\ \\ \\ \\ \\ \\
+% \newpage
+\section{Mathematical Derivation}
+
+\subsection{Assumptions}
+\begin{itemize}
+\item Assume unit quaternions: $||\bm{q}|| = 1$
+\end{itemize}
+
+\subsection{Quadcopter Body Dynamics}
+The state of body is defined as follow:
+\begin{align*}
+  \bm{s_B} &=
+  \begin{bmatrix}
+    \bm{p_B} \\ \bm{q_B}
+  \end{bmatrix}
+\end{align*}
+Forces and Torques:
+\begin{align*}
+  \prescript{B}{}{\bm{F_{TB}}} &=
+  \begin{bmatrix}
+    0 \\ 0 \\ F_{TB}
+  \end{bmatrix} \\
+  \prescript{O}{}{\bm{F_{GB}}} &=
+  \begin{bmatrix}
+    0 \\ 0 \\ -m_b g
+  \end{bmatrix} \\
+  \prescript{B}{}{\bm{F_{SB}}} &=
+  \begin{bmatrix}
+    F_{SBx} \\ F_{SBy} \\ F_{SBz} 
+  \end{bmatrix} \\
+  \prescript{B}{}{\bm{\tau_{SB}}} &=
+  \begin{bmatrix}
+    \tau_{SBx} \\ \tau_{SBy} \\ \tau_{SBz} 
+  \end{bmatrix}
+\end{align*}
+The Quaternion-derived Rotation matrix is defined as follow,
+\begin{align*}
+  \prescript{B}{O}{R} = R(\bm{q_B}) =
+  \begin{bmatrix}
+    q_r^2 + q_i^2 - q_j^2 - q_k^2 & 2q_iq_j - 2q_rq_k & 2q_iq_k + 2q_rq_j \\
+    2q_iq_j + 2q_rq_k & q_r^2 - q_i^2 + q_j^2 - q_k^2 & 2q_jq_k - 2q_rq_i \\
+    2q_iq_k - 2q_rq_j & 2q_jq_k + 2q_rq_i & q_r^2 - q_i^2 - q_j^2 +q_k^2
+  \end{bmatrix}
+\end{align*}
+Net Force
+\begin{align*}
+  \prescript{O}{}{\bm{F_{B, net}}} &= \prescript{O}{}{\bm{F_{GB}}} + \prescript{O}{}{\bm{F_{TB}}} + \prescript{O}{}{\bm{F_{SB}}} = m_B \prescript{O}{}{\bm{a_B}} \\
+  \prescript{O}{}{\bm{F_{GB}}} + (\prescript{O}{B}{R})^T \prescript{B}{}{\bm{F_{TB}}} + (\prescript{O}{B}{R})^T \prescript{B}{}{\bm{F_{SB}}} &= m_B \bm{a_B} = m_B \prescript{O}{}{\bm{\ddot{p}_B}}
+\end{align*}
+Net Torque
+\begin{align*}
+  \prescript{O}{}{\bm{\tau_{B, net}}} &= I_B \prescript{O}{}{\bm{\alpha_B}} \\
+  (\prescript{O}{B}{R})^T \prescript{B}{}{\bm{\tau_{SB}}} &= 2I_B(\bm{\ddot{q}_B} \bm{q_B} - (\bm{\dot{q}_B} \bm{q}_B)^2)
+\end{align*}
+By appling Physics law, we arrive at two equations below,
+\begin{align}
+  \prescript{O}{}{\bm{F_{GB}}} + (\prescript{O}{B}{R})^T \prescript{B}{}{\bm{F_{TB}}} + (\prescript{O}{B}{R})^T \prescript{B}{}{\bm{F_{SB}}} &= m_B \prescript{O}{}{\bm{\ddot{p}_B}} \\  
+  (\prescript{O}{B}{R})^T \prescript{B}{}{\bm{\tau_{SB}}} &= 2I_B(\bm{\ddot{q}_B} \bm{q_B} - (\bm{\dot{q}_B} \bm{q}_B)^2)  
+\end{align}
+We then aim to find the state evolution equation for the body from the above equations (1) and (2), namely
+\begin{equation}
+  \bm{\dot{s}_B} = f_B(\bm{s}_B, \bm{F_{B, net}}, \bm{\tau_{B, net}})
+\end{equation}
+\subsection{Controller Dynamics}
+Similarly as above we aim to find the state evolution equation for the controller from equations we got from Physics law, namely
+\begin{equation}
+  \bm{\dot{s}_C} = f_C(\bm{s}_C, \bm{F_{C, net}}, \bm{\tau_{C, net}})
+\end{equation}
+
+\subsection{Constraints and Manipulation}
+The two bodies are contrainted (attached together), there are some relationship between the states and the forces between the body and the controller, 
+\begin{align}
+  \bm{s_C} &= f_{BC}(\bm{s_B}) \\
+  \bm{F_C} &= g_{BC,F}(\bm{F_B}) \\
+  \bm{\tau_C} &= g_{BC,\tau}(\bm{\tau_B})
+\end{align}
+Combining the above equations with (3) and (4), we would like to do some algebraic manipulation to get rid of the unwanted parameters in our state evolution equations, such that
+\begin{align*}
+  \bm{\dot{s}_{sys}} = f_{sys}(\bm{s_{sys}}, \bm{u})
+\end{align*}
+with u being our input, whatever we defined our input to be, either being the yaw torque in the body frame $\tau_{SBz}$ or some other representations.
+\end{document}
