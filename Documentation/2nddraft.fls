@@ -2,8 +2,8 @@ PWD /Users/wilsonchang/Desktop/masscopter/Documentation
 INPUT /usr/local/texlive/2017/texmf.cnf
 INPUT /usr/local/texlive/2017/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT 1stdraft.tex
-OUTPUT 1stdraft.log
+INPUT 2nddraft.tex
+OUTPUT 2nddraft.log
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/size12.clo
@@ -227,10 +227,10 @@ INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/mathtools.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/mathtools.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/mhsetup.sty
-OUTPUT 1stdraft.glo
-INPUT 1stdraft.aux
-INPUT 1stdraft.aux
-OUTPUT 1stdraft.aux
+OUTPUT 2nddraft.glo
+INPUT 2nddraft.aux
+INPUT 2nddraft.aux
+OUTPUT 2nddraft.aux
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/ucs/ucsencs.def
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/ucs/ucsencs.def
 INPUT /usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -285,9 +285,9 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm
 INPUT UCLA_Logo.png
 INPUT ./UCLA_Logo.png
-OUTPUT 1stdraft.pdf
+OUTPUT 2nddraft.pdf
 INPUT ./UCLA_Logo.png
-OUTPUT 1stdraft.ist
+OUTPUT 2nddraft.ist
 INPUT /usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
@@ -296,7 +296,7 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
-INPUT 1stdraft.aux
+INPUT 2nddraft.aux
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb

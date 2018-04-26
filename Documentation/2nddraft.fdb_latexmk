@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1524513410 "1stdraft.tex" "1stdraft.pdf" "1stdraft" 1524513413
+["pdflatex"] 1524733087 "2nddraft.tex" "2nddraft.pdf" "2nddraft" 1524733090
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1480098698 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1480098698 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -187,12 +187,12 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1495593487 4129592 0e6cfee100d68e6d96b92c0258f2ff73 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "1stdraft.aux" 1524513412 849 6eb4ee25171ea5cd87be1c48ef7f775a ""
-  "1stdraft.tex" 1524513409 9662 02c0b336045c6670bf3b91fe85f1350f ""
+  "2nddraft.aux" 1524733090 849 fc6649c22ec2a6888c04a6097bb81108 ""
+  "2nddraft.tex" 1524733086 9070 2a22c98203962f70acf91c71dd431b0f ""
   "UCLA_Logo.png" 1522882807 544077 421f71d1b75136297d58ed1128ff0e86 ""
   (generated)
-  "1stdraft.aux"
-  "1stdraft.glo"
-  "1stdraft.log"
-  "1stdraft.ist"
-  "1stdraft.pdf"
+  "2nddraft.log"
+  "2nddraft.pdf"
+  "2nddraft.glo"
+  "2nddraft.aux"
+  "2nddraft.ist"

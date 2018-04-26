@@ -154,29 +154,14 @@ Net Torque
 \end{align*}
 By appling Physics law, we arrive at two equations below,
 \begin{align}
-  \prescript{O}{}{\bm{F_{GB}}} + \prescript{O}{B}{R} \prescript{B}{}{\bm{F_{TB}}} + \prescript{O}{B}{R} \prescript{B}{}{\bm{F_{SB}}} &= m_B \prescript{O}{}{\bm{\ddot{p}_B}} \\  
-  \prescript{O}{B}{R} \prescript{B}{}{\bm{\tau_{SB}}} &= 2I_B(\bm{\ddot{q}_B} \bm{q_B}^* - (\bm{\dot{q}_B} \bm{q_B}^*)^2)  
+  \prescript{O}{}{\bm{F_{GB}}} + R(\bm{q_B}) \prescript{B}{}{\bm{F_{TB}}} + R(\bm{q_B}) \prescript{B}{}{\bm{F_{SB}}} &= m_B \prescript{O}{}{\bm{{a}_B}} \\  
+  R(\bm{q_B}) \prescript{B}{}{\bm{\tau_{SB}}} &= 2\prescript{O}{}{I_B}(\bm{\prescript{O}{}{\alpha_{B}}})  
 \end{align}
-We then aim to find the state evolution equation for the body from the above equations (1) and (2), namely
-\begin{equation}
-  \bm{\dot{s}_B} = f_B(\bm{s}_B, \bm{F_{B, net}}, \bm{\tau_{B, net}})
-\end{equation}
-Let $\bm{v_B} = \bm{\dot{p}_B}$ and $\bm{\omega_B} = \bm{\dot{q}_B}$ and substitute new variables,
-\begin{align*}
-  \bm{\dot{p}_B} &= \bm{v_B} \\
-  \bm{\dot{v}_B} &= \frac{1}{m_B} \left[R(\bm{q_B})\prescript{B}{}{\bm{F_{TB}}} + R(\bm{q_B}) \prescript{B}{}{\bm{F_{SB}}} + \prescript{O}{}{\bm{F_{GB}}}\right] \\
-  \bm{\dot{q}_B} &= \bm{\omega{_B}} \\
-  \bm{\dot{\omega}_B} &= \left[ \frac{R(\bm{q_B}) \bm{\bm{\tau_{SB}}}}{2I_B} + {(\bm{\omega_B} \bm{{q^*_B})}}^2 \right] \bm{q_B}
-\end{align*}
-Then, by letting our state variable $\bm{s_B} =
-\begin{bmatrix}
-  \bm{p_B} \\
-  \bm{v_B} \\
-  \bm{q_B} \\
-  \bm{\omega_B}
-\end{bmatrix}
-$, we arrive at the desired state evolution equation.
-
+with $\prescript{O}{}{\bm{F_{TB}}} = R(\bm{q_B}) \prescript{B}{}{\bm{F_{TB}}}, \quad
+\prescript{O}{}{\bm{F_{SB}}} = R(\bm{q_B}) \prescript{B}{}{\bm{F_{SB}}}, \quad
+\prescript{O}{}{\bm{\tau_{SB}}} = R(\bm{q_B}) \prescript{B}{}{\bm{\tau_{TB}}}, \quad \\
+\prescript{O}{}{I_{B}}= R(\bm{q_B}) \prescript{B}{}{I_{B}} R^{-1}(\bm{q_B}), \quad
+$
 
 \subsection{Controller Dynamics}
 Similarly as above we aim to find the state evolution equation for the controller from equations we got from Physics law, namely
@@ -197,7 +182,7 @@ Forces and Torques:
   \begin{bmatrix}
     \tau_{SCx} \\ \tau_{SCy} \\ \tau_{SCz} 
   \end{bmatrix} \\
-  \prescript{}{O}{\bm{\tau_{M}}} &= \prescript{O}{}{\bm{r_M}} \times \prescript{O}{}{\bm{F_{GC}}} = \prescript{O}{B}{R} \prescript{B}{}{\bm{r_M}} \times \prescript{O}{}{\bm{F_{GC}}} \\
+  \prescript{O}{}{\bm{\tau_{M}}} &= \prescript{O}{}{\bm{r_M}} \times \prescript{O}{}{\bm{F_{GC}}} = \prescript{O}{B}{R} \prescript{B}{}{\bm{r_M}} \times \prescript{O}{}{\bm{F_{GC}}} \\
                                &= R(q_C) 
                                  \begin{bmatrix}
                                    L_{Mx} \\ 0 \\ L_{Mz}
@@ -205,6 +190,8 @@ Forces and Torques:
   \begin{bmatrix}
     0 \\ 0 \\ -m_c g
   \end{bmatrix}
+  \intertext{By}
+  \tau_{CM}
 \end{align*}
 Net Force and Net Torque:
 \begin{align*}

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  23 APR 2018 12:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 APR 2018 01:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**1stdraft.tex
-(./1stdraft.tex
+**2nddraft.tex
+(./2nddraft.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
@@ -675,12 +675,12 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 )
 \glswrite=\write4
 \glo@main@file=\write5
-\openout5 = `1stdraft.glo'.
+\openout5 = `2nddraft.glo'.
 
-Package glossaries Info: Writing glossary file 1stdraft.glo on input line 54.
+Package glossaries Info: Writing glossary file 2nddraft.glo on input line 54.
 
-(./1stdraft.aux)
-\openout1 = `1stdraft.aux'.
+(./2nddraft.aux)
+\openout1 = `2nddraft.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
@@ -766,7 +766,7 @@ Package pdftex.def Info: UCLA_Logo.png used on input line 85.
 (pdftex.def)             Requested size: 91.33963pt x 79.29483pt.
  [1
 
-\openout4 = `1stdraft.ist'.
+\openout4 = `2nddraft.ist'.
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./UCLA_
 Logo.png>]
@@ -786,17 +786,26 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 113.
- [1] [2] [3]
+ [1]
+Overfull \hbox (4.28276pt too wide) in paragraph at lines 159--165
+\OT1/cmr/m/n/12 with $[][][][] = \OML/cmm/m/it/12 R\OT1/cmr/m/n/12 (\OML/cmm/b/
+it/12 q[]\OT1/cmr/m/n/12 ) [][][][]\OML/cmm/m/it/12 ;  [][][][] \OT1/cmr/m/n/12
+ = \OML/cmm/m/it/12 R\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 q[]\OT1/cmr/m/n/12 ) [][
+][][]\OML/cmm/m/it/12 ;  [][][][] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 R\OT1/cmr/
+m/n/12 (\OML/cmm/b/it/12 q[]\OT1/cmr/m/n/12 ) [][][][]\OML/cmm/m/it/12 ; [] 
+ []
+
+[2] [3]
 
 Package glossaries Warning: No \printglossary or \printglossaries found. 
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-[4] (./1stdraft.aux) ) 
+[4] (./2nddraft.aux) ) 
 Here is how much of TeX's memory you used:
  19527 strings out of 492995
  379003 string characters out of 6132704
- 486131 words of memory out of 5000000
+ 490130 words of memory out of 5000000
  22670 multiletter control sequences out of 15000+600000
  13795 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -817,7 +826,7 @@ onts/cm/cmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmti12.pfb>
-Output written on 1stdraft.pdf (5 pages, 529854 bytes).
+Output written on 2nddraft.pdf (5 pages, 528809 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  61 compressed objects within 1 object stream
