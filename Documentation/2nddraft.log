@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 APR 2018 01:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  28 APR 2018 20:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -770,46 +770,42 @@ Package pdftex.def Info: UCLA_Logo.png used on input line 85.
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./UCLA_
 Logo.png>]
-Overfull \hbox (73.10396pt too wide) in paragraph at lines 93--109
+Overfull \hbox (73.10396pt too wide) in paragraph at lines 93--110
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--109
+Underfull \hbox (badness 10000) in paragraph at lines 93--110
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 113.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 114.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 113.
- [1]
-Overfull \hbox (4.28276pt too wide) in paragraph at lines 159--165
-\OT1/cmr/m/n/12 with $[][][][] = \OML/cmm/m/it/12 R\OT1/cmr/m/n/12 (\OML/cmm/b/
-it/12 q[]\OT1/cmr/m/n/12 ) [][][][]\OML/cmm/m/it/12 ;  [][][][] \OT1/cmr/m/n/12
- = \OML/cmm/m/it/12 R\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 q[]\OT1/cmr/m/n/12 ) [][
-][][]\OML/cmm/m/it/12 ;  [][][][] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 R\OT1/cmr/
-m/n/12 (\OML/cmm/b/it/12 q[]\OT1/cmr/m/n/12 ) [][][][]\OML/cmm/m/it/12 ; [] 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
+ [1] [2] [3]
+Overfull \hbox (108.89459pt too wide) in paragraph at lines 235--235
+[] 
  []
 
-[2] [3]
+[4]
 
 Package glossaries Warning: No \printglossary or \printglossaries found. 
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-[4] (./2nddraft.aux) ) 
+[5] (./2nddraft.aux) ) 
 Here is how much of TeX's memory you used:
  19527 strings out of 492995
  379003 string characters out of 6132704
- 490130 words of memory out of 5000000
+ 486131 words of memory out of 5000000
  22670 multiletter control sequences out of 15000+600000
  13795 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,22n,56p,1936b,258s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,26n,56p,1936b,281s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
 sfonts/cmextra/cmbsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
@@ -817,19 +813,20 @@ c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmmi12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmib10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
-onts/cmextra/cmmib8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmti12.pfb>
-Output written on 2nddraft.pdf (5 pages, 528809 bytes).
+sfonts/cm/cmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmib10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
+ts/cmextra/cmmib8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmti12.pfb>
+Output written on 2nddraft.pdf (6 pages, 538360 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+ 93 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

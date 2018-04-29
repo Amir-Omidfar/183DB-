@@ -154,9 +154,14 @@ Net Torque
 \end{align*}
 By appling Physics law, we arrive at two equations below,
 \begin{align}
-  \prescript{O}{}{\bm{F_{GB}}} + \prescript{O}{B}{R} \prescript{B}{}{\bm{F_{TB}}} + \prescript{O}{B}{R} \prescript{B}{}{\bm{F_{SB}}} &= m_B \prescript{O}{}{\bm{\ddot{p}_B}} \\  
-  \prescript{O}{B}{R} \prescript{B}{}{\bm{\tau_{SB}}} &= 2I_B(\bm{\ddot{q}_B} \bm{q_B}^* - (\bm{\dot{q}_B} \bm{q_B}^*)^2)  
+  \prescript{O}{}{\bm{F_{GB}}} + R(\bm{q_B}) \prescript{B}{}{\bm{F_{T}}} + R(\bm{q_B}) \prescript{B}{}{\bm{F_{CB}}} &= m_B \prescript{O}{}{\bm{{a}_B}} \\  
+  R(\bm{q_B}) \prescript{B}{}{\bm{\tau_{CB}}} &= 2\prescript{O}{}{I_B}(\bm{\prescript{O}{}{\alpha_{B}}})  
 \end{align}
+with $\prescript{O}{}{\bm{F_{T}}} = R(\bm{q_B}) \prescript{B}{}{\bm{F_{T}}}, \quad
+\prescript{O}{}{\bm{F_{CB}}} = R(\bm{q_B}) \prescript{B}{}{\bm{F_{CB}}}, \quad
+\prescript{O}{}{\bm{\tau_{CB}}} = R(\bm{q_B}) \prescript{B}{}{\bm{\tau_{T}}}, \quad \\
+\prescript{O}{}{I_{B}}= R(\bm{q_B}) \prescript{B}{}{I_{B}} R^{-1}(\bm{q_B}), \quad
+$
 We then aim to find the state evolution equation for the body from the above equations (1) and (2), namely
 \begin{equation}
   \bm{\dot{s}_B} = f_B(\bm{s}_B, \bm{F_{B, net}}, \bm{\tau_{B, net}})
