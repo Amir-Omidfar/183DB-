@@ -1,0 +1,116 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University Assignment Title Page 
+% LaTeX Template
+% Version 1.0 (27/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+% Instructions for using this template:
+% This title page is capable of being compiled as is. This is not useful for 
+% including it in another document. To do this, you have two options: 
+%
+% 1) Copy/paste everything between \begin{document} and \end{document} 
+% starting at \begin{titlepage} and paste this into another LaTeX file where you 
+% want your title page.
+% OR
+% 2) Remove everything outside the \begin{titlepage} and \end{titlepage} and 
+% move this file to the same directory as the LaTeX file you wish to add it to. 
+% Then add \input{./title_page_1.tex} to your LaTeX file where you want your
+% title page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\title{Title page with logo}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+% My Packpage 
+\usepackage{glossaries}
+\usepackage{bm}
+\usepackage{mathtools}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\begin{document}
+\begin{align}
+  \prescript{O}{}{\bm{F_{B, net}}} &= \prescript{O}{}{\bm{F_{GB}}} + \prescript{O}{}{\bm{F_{T}}} + \prescript{O}{}{\bm{F_{CB}}} = m_B \prescript{O}{}{\bm{a_B}} \\
+  \prescript{O}{}{\bm{\tau_{B, net}}} &= R(\bm{q_B})\prescript{B}{}{\bm{\tau_{CB}}} = \prescript{O}{}{I_B} \prescript{O}{}{\bm{\alpha_B}}
+\end{align}
+\begin{align}
+  \prescript{O}{}{\bm{F_{net, C}}} &= \prescript{O}{}{\bm{F_{BC}}} + \prescript{O}{}{\bm{F_{GC}}} = m_C \prescript{O}{}{\bm{a_C}} \\
+  \prescript{O}{}{\bm{\tau_{net, C}}} &= R(\bm{q_C})\prescript{C}{}{\bm{\tau_{BC}}} + \prescript{O}{}{\bm{\tau_{RF}}} = \prescript{O}{}{I_c} \prescript{O}{}{\bm{\alpha_C}}
+\end{align}
+\begin{align}
+  \begin{bmatrix}
+    \bm{p_C} \\
+    \bm{q_C}
+  \end{bmatrix} &=
+  \begin{bmatrix}
+    \bm{p_B} + \bm{r_{BC}} \\
+    \bm{q_{\theta}}\bm{q_B}
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    \bm{p_{sys}} + \bm{r_{BC}} \\
+    \bm{q_{\theta}}\bm{q_{sys}}
+\end{bmatrix}  \\
+% First Derivative
+  \begin{bmatrix}
+    \bm{\dot{p}_C} \\
+    \bm{\dot{q}_C}
+  \end{bmatrix} &=
+  \begin{bmatrix}
+    \bm{\dot{p}_{sys}} + \dot{R}(\bm{q_{sys}})\prescript{B}{}{\bm{r_{BC}}} \\
+    \bm{q_{\theta}}\bm{\dot{q}_{sys}} + \bm{\dot{q}_{\theta}}\bm{q_{sys}} 
+\end{bmatrix} \\
+% Second Derivative
+  \begin{bmatrix}
+    \bm{\ddot{p}_C} \\
+    \bm{\ddot{q}_C}
+  \end{bmatrix} &=
+  \begin{bmatrix}
+    \bm{\ddot{p}_{sys}} + \ddot{R}(\bm{q_{sys}})\prescript{B}{}{\bm{r_{BC}}} \\
+    \bm{q_{\theta}}\bm{\ddot{q}_{sys}} + 2[\bm{\dot{q_\theta}} \bm{\dot{q}_{sys}}] + \bm{\ddot{q}_{\theta}}\bm{q_{sys}} 
+  \end{bmatrix} \\   
+  \prescript{O}{}{\bm{F_{BC}}} &= -\prescript{O}{}{\bm{F_{CB}}} \\
+  \prescript{O}{}{\bm{\tau_{BC}}} &= -\prescript{O}{}{\bm{\tau_{CB}}}
+\end{align}
+\begin{align}
+  q_r^2 + q_i^2 + q_j^2 + q_k^2 = 1 \\
+  q_r\dot{q_r} + q_i\dot{q_i} + q_j\dot{q_j} + q_k\dot{q_k} = 0\\
+  q_r\ddot{q_r} + q_i\ddot{q_i} + q_j\ddot{q_j} + q_k\ddot{q_k} + \dot{q_r}^2 + \dot{q_i}^2 + \dot{q_j}^2 + \dot{q_k}^2 = 0
+\end{align}
+\begin{align}
+  \bm{q_\theta} &= \cos(\frac{\theta}{2}) + \sin(\frac{\theta}{2})R(\bm{q_{sys}})\prescript{B}{}{\bm{\hat{z}_B}} \\
+  \bm{\dot{q}_\theta} &= -\frac{1}{2}\sin(\frac{\theta}{2})\dot{\theta} + \frac{1}{2}\cos(\frac{\theta}{2})\dot{\theta}R(\bm{q_{sys}})\prescript{B}{}{\bm{\hat{z}_B}} + \sin{(\frac{\theta}{2})}R(\bm{\dot{q}_{sys}}) \prescript{B}{}{\bm{\hat{z}_B}}
+\end{align}
+\begin{equation}
+    (m_b + m_c) \bm{\ddot{p}_{sys}} + m_c \ddot{R}(\bm{q_{sys}}) \prescript{B}{}{\bm{r_{BC}}} = \bm{F_{GC}} + \bm{F_{GB}} + \bm{F_{T}} 
+\end{equation}
+\begin{equation}
+  2I_B \left[\bm{\ddot{q}_B}\bm{q_B^*} - (\bm{\dot{q}_B} \bm{q_B^*})^2\right] + 2I_c \left[\bm{\ddot{q}_C}\bm{q_C^*} - (\bm{\dot{q}_C} \bm{q_C^*})^2\right] = \prescript{O}{}{\bm{\tau_{RF}}}
+\end{equation}
+\begin{align}
+  2 I_B [\bm{\ddot{q}_{sys}} \bm{q_{sys}^*}] + 2I_C [\bm{q_{\theta}}\bm{\ddot{q}_{sys}} (\bm{q_{\theta}} \bm{q_{sys}})^{\bm{*}}] + 2 I_C [\bm{\ddot{q}_{\theta}} \bm{q_{sys}}](\bm{q_{\theta}q_{sys}})^{\bm{*}} - \bm{r_{CB}} \times \bm{F_{BC}} = \zeta
+\end{align}
+where
+\begin{align*}
+  \zeta = 2I_B(\bm{\dot{q}_{sys}}\bm{q_{sys}^*})^2 + 2I_C[(\bm{q_\theta} \bm{\dot{q}_{sys}} + \bm{\dot{q}_\theta}\bm{q_{sys}})(\bm{q_{\theta}\bm{q_{sys}}})^{\bm{*}}]^2 - 4I_C(\bm{\dot{q}_{\theta}\dot{q}_{sys}} )(\bm{q_\theta q_{sys}})^{\bm{*}}
+\end{align*}
+\begin{align*}
+  \bm{F_{BC}} = m_B \bm{\ddot{p}_{sys}} - \bm{F_{GB}} - \bm{F_{T}}
+\end{align*}
+\end{document}
