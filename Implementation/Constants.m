@@ -1,4 +1,5 @@
 %% List of Constatns
+global g I_B I_C m_B m_C r_BC r_CB F_GC F_GB F_T
 g = -9.8;
 I_B = diag([1,1,1]);
 I_C = diag([1,1,1]);
