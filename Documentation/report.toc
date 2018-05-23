@@ -1,0 +1,16 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Symbols}{2}
+\contentsline {section}{\numberline {2}Introduction}{2}
+\contentsline {section}{\numberline {3}Mathematical Model}{2}
+\contentsline {section}{\numberline {4}Simulation}{2}
+\contentsline {section}{\numberline {5}Implementation}{2}
+\contentsline {section}{\numberline {6}Results}{2}
+\contentsline {section}{\numberline {7}Conclusion}{2}
+\contentsline {section}{\numberline {8}Reference}{2}
+\contentsline {section}{\numberline {9}Mathematical Derivation}{3}
+\contentsline {subsection}{\numberline {9.1}Appendix}{3}
+\contentsline {subsection}{\numberline {9.2}Quadcopter Body Dynamics}{3}
+\contentsline {subsection}{\numberline {9.3}Controller Dynamics}{4}
+\contentsline {subsection}{\numberline {9.4}Constraints and Manipulation}{4}
+\contentsline {subsubsection}{\numberline {9.4.1}Combining the Force equations}{5}
+\contentsline {subsubsection}{\numberline {9.4.2}Combining the Torqe equations}{6}
