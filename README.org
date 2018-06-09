@@ -48,4 +48,4 @@
 - Wilson and Lin can use similar diagrams  
 - Lin can use the same colors as in physical prototype
 - Lin exlapins the equation he had for optimal speed(how was the derivation) 
-3) Prepare an effective demo
+
