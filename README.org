@@ -38,4 +38,14 @@
 	+ deduce signs from direction of arrow
 	
    3) 
-
+* Final Presentation and report tips advices from Professor Mehta:
+1) Emphasize connection among all four different areas we worked on:
+	-Mathematical Modeling
+	-Simulation
+	-Motor analysis
+	-Physical Implementation
+2) Have a cohisive story in order to tie all separtate parts back into the same project:
+	-Wilson and Lin can use similar diagrams  
+	-Lin can use the same colors as in physical prototype
+	-Lin exlapins the equation he had for optimal speed(how was the derivation) 
+3) Prepare an effective demo
