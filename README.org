@@ -45,7 +45,7 @@
 	- Motor analysis
 	- Physical Implementation
 2) Have a cohisive story in order to tie all separtate parts back into the same project:
--Wilson and Lin can use similar diagrams  
--Lin can use the same colors as in physical prototype
--Lin exlapins the equation he had for optimal speed(how was the derivation) 
+- Wilson and Lin can use similar diagrams  
+- Lin can use the same colors as in physical prototype
+- Lin exlapins the equation he had for optimal speed(how was the derivation) 
 3) Prepare an effective demo
