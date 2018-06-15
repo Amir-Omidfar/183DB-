@@ -1,6 +1,6 @@
 * Introduction
-   Modern Rocket uses 2 DOF revolute joint to turn the nozzle to directly control the direction of thrust. Challenges are it has to resist a very high temperature and the joint need a large amount of energy to keep the nozzle in a specific direction. Instead, a precisely controlled off-center mass in the front of the rocket can create a torque that steers the Rocket.
-   We aim to explore an alternative way to steer flying vehicles with underactuated controller. Taking the motivation from modern rocket control, we are going to implement such controller in a quadcopter and explore the possibilities of such control. We hope to extend such controller to steer rockets in a more cost and energy efficient manner.
+   Modern Rocket uses 2 DOF revolute joint to turn the nozzle to directly control the direction of thrust. Challenges are it has to resist a very high temperature and the joint need a large amount of energy to keep the nozzle in a specific direction. Instead, a precisely controlled off-center mass in the front of the rocket can create a torque that steers the Rocket. \\
+   We aim to explore an alternative way to steer flying vehicles with underactuated controller. Taking the motivation from modern rocket control, we are going to implement such controller in a quadcopter and explore the possibilities of such control. We hope to extend such controller to steer rockets in a more cost and energy efficient manner. \\
    For a brief summary of our project, check out the following:
    - [[https://github.com/Amir-Omidfar/183DB-/blob/master/FInal%2520Report.pdf][Final Presentation]]
    - [[wait to be upload][Final Documentation]]
