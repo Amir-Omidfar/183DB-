@@ -1,18 +1,29 @@
-* General Resources
+* Introduction
+   Modern Rocket uses 2 DOF revolute joint to turn the nozzle to directly control the direction of thrust. Challenges are it has to resist a very high temperature and the joint need a large amount of energy to keep the nozzle in a specific direction. Instead, a precisely controlled off-center mass in the front of the rocket can create a torque that steers the Rocket.
+   We aim to explore an alternative way to steer flying vehicles with underactuated controller. Taking the motivation from modern rocket control, we are going to implement such controller in a quadcopter and explore the possibilities of such control. We hope to extend such controller to steer rockets in a more cost and energy efficient manner.
+   For a brief view of what we've done, check out the following:
+   - 
+* Mathematical Model  
+
+
+
+
+* Scratch Board
+** General Resources
   - Professor Office Hours: ? I sent an email inquiry
   - [[https://drive.google.com/drive/folders/1oTfQlVWcGNcjBcGgUbyTBhJVp0DoDn2w][google drive folder]]
   - [[https://www.overleaf.com/15319132wvnjrthtfxrp][overleaf latex]]
   - [[https://ocw.mit.edu/courses/mechanical-engineering/2-003sc-engineering-dynamics-fall-2011/newton2019s-laws-vectors-and-reference-frames/][mit dynamic course]]
   - [[http://www.es.ele.tue.nl/education/5HC99/wiki/images/4/42/RigidBodyDynamics.pdf][Inertial/Body frame, Rotation Matrix]]
-* Goal / Tasks
+** Goal / Tasks
   - WE NEED TO START ORDERING SHIT
   - ALWAYS GO TO OFFICE HOURS
-* Mathematical Derivation
+** Mathematical Derivation
   - Size of the current quadcopter
   - Start having some shit on paper so we can ask more solid question during office hours
 ** Free Body Diagram
 ** Inertial Frame vs Body Frame
-* Project plan
+** Project plan
   | Milestone(s)                | Demonstration                                            |
   |-----------------------------+----------------------------------------------------------|
   | Pick our components         | Reason choosing these parts                              |
@@ -26,7 +37,7 @@
   | End-to-end testing          | Gather experimental results that supports our conclusion |
   | Documentation               | Document all our work                                    |
 
-* Research Online
+** Research Online
 ** Model  
    1) Describe the motion
       - assign a coordination system
@@ -38,7 +49,7 @@
 	+ deduce signs from direction of arrow
 	
    3) 
-* Final Presentation and report tips advices from Professor Mehta:
+** Final Presentation and report tips advices from Professor Mehta:
 1) Emphasize connection among all four different areas we worked on:
 	- Mathematical Modeling
 	- Simulation
@@ -49,7 +60,7 @@
 - Lin can use the same colors as in physical prototype
 - Lin exlapins the equation he had for optimal speed(how was the derivation) 
 
-* Presentation Orgainzation
+** Presentation Orgainzation
 ** Abstract
   We aim to design an underactuated controller which is essen- tially a off-center spinning mass that is able to steer flying vehicles. A quadcopter is used to demonstrate the principle of such controller. By in-depth analysis of the system dynamics and results from this project, we believe such principle can be applied to modern rockets with little modification.
 ** Introduction and Problem Statement
