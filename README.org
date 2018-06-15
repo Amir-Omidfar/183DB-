@@ -1,13 +1,16 @@
 * Introduction
    Modern Rocket uses 2 DOF revolute joint to turn the nozzle to directly control the direction of thrust. Challenges are it has to resist a very high temperature and the joint need a large amount of energy to keep the nozzle in a specific direction. Instead, a precisely controlled off-center mass in the front of the rocket can create a torque that steers the Rocket.
    We aim to explore an alternative way to steer flying vehicles with underactuated controller. Taking the motivation from modern rocket control, we are going to implement such controller in a quadcopter and explore the possibilities of such control. We hope to extend such controller to steer rockets in a more cost and energy efficient manner.
-   For a brief view of what we've done, check out the following:
-   - 
+   For a brief summary of our project, check out the following:
+   - [[https://github.com/Amir-Omidfar/183DB-/blob/master/FInal%2520Report.pdf][Final Presentation]]
+   - [[wait to be upload][Final Documentation]]
 * Mathematical Model  
-
-
-
-
+  Using Newton's fundamental law of physics, we are able to derive systems of equations that characterize the dynamics of our system. However, due to the complexity introduced by rotational acceleration, even in quaternion, no close-solution in the form of $\dot{s} = f(s)$ is analytically derived. Moreover, solving the equations in the form $f(\dot{s},s)$ numerically in Matlab yields no solutions.
+* Simulation
+* Motor Exploration  
+  - video link
+* Actual Implementation
+  - video link
 * Scratch Board
 ** General Resources
   - Professor Office Hours: ? I sent an email inquiry
