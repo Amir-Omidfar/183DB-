@@ -36,6 +36,7 @@
 \usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\graphicspath{ {./images/} }
 \usepackage[colorinlistoftodos]{todonotes}
 
 % My Packpage 
@@ -77,7 +78,7 @@ Amirali \textsc{Omidfar} % Your name
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
 \emph{Professor:} \\
-Ankur \textsc{Metha} % Supervisor's Name
+Ankur \textsc{Mehta} % Supervisor's Name
 \end{flushright}
 \end{minipage}\\[1cm]
 {\large \today}\\[1cm] % Date, change the \today to a set date if you want to be precise
@@ -86,7 +87,8 @@ Ankur \textsc{Metha} % Supervisor's Name
 \vfill % Fill the rest of the page with whitespace
 \end{titlepage}
 \begin{abstract}
-  We aim to design an underactuated controller which is essen- tially a off-center spinning mass that is able to steer flying vehicles. A quadcopter is used to demonstrate the principle of such controller. By in-depth analysis of the system dynamics and results from this project, we believe such principle can be applied to modern rockets with little modification.
+  We aim to design an off-center spinning mass underactuated controller to steer flying objects. A quadcopter with a rotating arm attached to it is used to demonstrate the principle of such controller. By in depth analysis of the system dynamics and results of this project, we wanted to develop a similar model applicable for rocket control systems.
+
 \end{abstract}
 \tableofcontents
 \section{Introduction}
@@ -302,11 +304,40 @@ We have our state evolution equations as
 
 \subsection{Matlab Implementation}
 Implementing the systems of equations in (16), and solve for $\bm{\ddot{p}},\bm{\ddot{q}}, \ddot{\theta}$ given $\bm{\dot{p}},\bm{\dot{q}}, \dot{\theta},\bm{p},\bm{q}, \theta$ in Matlab doesn't yield a solution. There must be something wrong with the equations / the implementation.
-
 \section{Simulation}
 
-\section{Spinning mass design and Mouting module}
-\textbf{Design}
+\section{Off center spinning module design}
+In order to clarify the steps taken in designing the spinning mass module, we start with reviewing some main specifications of the quad-copter used for the purpose in the project.
+\subsection{Quad-copter Specifications}
+Crazyflie 2.0 is a 27 gram nano quad-copter used for this project. As for designing our spinning mass module, the main constraint was the maximum payload that Crazyflie could handle. According to Crazyflie 2.0 hardware specifications maximum recommended payload is 15 grams. Therefore the spinning mass module initially assumed to have maximum weight of 15 grams.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{./img/CF.png}
+\caption{Crazyflie 2.0}
+\end{figure}
+
+\subsection{Spinning mass considerations}
+Our design of spinning consists of selecting below components:
+\begin{enumerate}
+  \item DC motor
+  \item Rotating arm
+  \item Actual mass
+  \item Rotary encoder 
+\end{enumerate}
+\subsubsection{DC motor}
+As mentioned, mainly constrained by maximum payload for spinning mass module, we needed small, light motor with control feedback. Next important constraint was voltage and current criteria of the motor. Ideally we aimed to power the module from Crazyflie power supply which was 3.7V (250 mAh). Adding external battery was not ideal for our weight limit, so before implementation we tested our candidate motor along with the quad-copter 4 motors and measured voltage and current drawn by candidate motor. Consequently we selected the same type of DC motor as those utilized in quad-copter. 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{./img/DCmotor.png}
+\caption{7mm Core less DC motor}
+\end{figure}
+The selected 7x16 mm Core less DC motor, weighs only 2.7 grams and was spinning controllable spinning rate drawing 0.4 A of current while powered by 3.7 battery. According to our power calculation, we estimated the complete system (quad-copter and spinning mass module) to last for roughly 4 minutes, which we agreed would have been enough for demonstrations purposes at this point.   
+After finalizing the ideal type of motor, we 
+\subsubsection{Rotating arm}
+
+
+
+\subsection{given summary}
 	In order to controll the the direction 	
   - How we come up with the off-center mass design?
 	+ why use the motor we chose? Light, pwm controllable speed
@@ -321,7 +352,7 @@ Implementing the systems of equations in (16), and solve for $\bm{\ddot{p}},\bm{
 	+ PWM
 	+ SMD soldering
 	+ Parallel battery source
-\section{Quadcopter Hacking}
+\section{Quad-copter Hacking}
 not successful    
 \section{Results}
   - Simulation and Mathematical Model suggest it may work

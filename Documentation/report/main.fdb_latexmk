@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1527997421 "report.tex" "report.pdf" "report" 1527997424
+["pdflatex"] 1528727650 "main.tex" "main.pdf" "main" 1528727652
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1480098698 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1480098698 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -185,14 +185,16 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1495593487 4129592 0e6cfee100d68e6d96b92c0258f2ff73 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "UCLA_Logo.png" 1522882807 544077 421f71d1b75136297d58ed1128ff0e86 ""
-  "report.aux" 1527997424 1922 2e56583d9b89930d9ec1962a288b7f45 ""
-  "report.tex" 1527997417 14766 401ad40a143446ea6783b5a78ffe27f9 ""
-  "report.toc" 1527997424 1264 b2a243510292fd7a2bdd9635fc4bbb6d ""
+  "UCLA_Logo.png" 1528752506 544077 421f71d1b75136297d58ed1128ff0e86 ""
+  "img/CF.png" 1528752528 359572 5e4cdcc21e72f438702c814f138a1078 ""
+  "img/DCmotor.png" 1528752536 37678 a2483818f4e7d9b8d77ef5cea5ee3a58 ""
+  "main.aux" 1528727652 2545 8d388c5305607f26159579d29dad3488 ""
+  "main.tex" 1528727644 16857 5458472f3c12e0c3002f5a5835ae818f ""
+  "main.toc" 1528727652 1609 f83d812c659e9eb4c0de68a7dc08c1ff ""
   (generated)
-  "report.toc"
-  "report.pdf"
-  "report.aux"
-  "report.glo"
-  "report.log"
-  "report.ist"
+  "main.glo"
+  "main.log"
+  "main.ist"
+  "main.aux"
+  "main.toc"
+  "main.pdf"

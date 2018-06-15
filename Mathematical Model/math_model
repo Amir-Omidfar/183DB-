@@ -36,9 +36,11 @@
 \usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\graphicspath{ {./images/} }
 \usepackage[colorinlistoftodos]{todonotes}
 
-% My Packpage 
+% My Packpage
+\usepackage{float}
 \usepackage{glossaries}
 \usepackage{bm}
 \usepackage{mathtools}
@@ -77,7 +79,7 @@ Amirali \textsc{Omidfar} % Your name
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
 \emph{Professor:} \\
-Ankur \textsc{Metha} % Supervisor's Name
+Ankur \textsc{Mehta} % Supervisor's Name
 \end{flushright}
 \end{minipage}\\[1cm]
 {\large \today}\\[1cm] % Date, change the \today to a set date if you want to be precise
@@ -86,12 +88,9 @@ Ankur \textsc{Metha} % Supervisor's Name
 \vfill % Fill the rest of the page with whitespace
 \end{titlepage}
 \begin{abstract}
-  We aim to design an underactuated controller which is essen- tially a off-center spinning mass that is able to steer flying vehicles. A quadcopter is used to demonstrate the principle of such controller. By in-depth analysis of the system dynamics and results from this project, we believe such principle can be applied to modern rockets with little modification.
+  We aim to design an off-center spinning mass underactuated controller to steer flying objects. A quadcopter with a rotating arm attached to it is used to demonstrate the principle of such controller. By in depth analysis of the system dynamics and results of this project, we wanted to develop a similar model applicable for rocket control systems.
+
 \end{abstract}
-\tableofcontents
-\section{Introduction}
-  Modern Rocket uses 2 DOF revolute joint to turn the nozzle to directly control the direction of thrust. Challenges are it has to resist a very high temperature and the joint need a large amount of energy to keep the nozzle in a specific direction. Instead, a precisely controlled off-center mass in the front of the rocket can create a torque that steers the Rocket. \par
-  We aim to explore an alternative way to steer flying vehicles with underactuated controller. Taking the motivation from modern rocket control, we are going to implement such controller in a quadcopter to demonstrate such principle. We hope to extend such controller to steer rockets in a more cost and energy efficient manner.
 \section{Mathematical Model}
 \subsection{Symbols}
 Here is a list of all symbols used in this paper:
@@ -122,6 +121,11 @@ The Quaternion-derived Rotation matrix is defined as follow,
 \end{align*}
 
 \subsection{Quadcopter Body Dynamics}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{./img/B_mm.png}
+\caption{Free-Body diagram of Body}
+\end{figure}
 Forces and Torques:
 \begin{align*}
   \prescript{B}{}{\bm{F_{T}}} &=
@@ -149,6 +153,11 @@ Net Force and Torque
 \end{align}
 
 \subsection{Controller Dynamics}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{./Wilson_img/C_mm.png}
+\caption{Free-Body diagram of Controller}
+\end{figure}
 Forces and Torques:
 \begin{align*}
   \prescript{O}{}{\bm{F_{BC}}} &=
@@ -219,7 +228,12 @@ To limit our degree of freedom in the system, we have set a constraint for our q
   q_r\dot{q_r} + q_i\dot{q_i} + q_j\dot{q_j} + q_k\dot{q_k} = 0\\
   q_r\ddot{q_r} + q_i\ddot{q_i} + q_j\ddot{q_j} + q_k\ddot{q_k} + \dot{q_r}^2 + \dot{q_i}^2 + \dot{q_j}^2 + \dot{q_k}^2 = 0
 \end{align}
-Last but not least, in the derivation below we use $\bm{q_\theta}$ directly for ease of typsetting, however, $q_{\theta}$ is not our state variable but $\theta$, their relationship is defined below
+Last but not least, in the derivation below we use $\bm{q_\theta}$ directly for ease of typsetting, however, $q_{\theta}$ is not our state variable but $\theta$, their relationship is defined below,
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{./Wilson_img/qt_mm.png}
+\caption{The yaw angle difference between Body and  Controller}
+\end{figure}
 \begin{align*}
   \bm{q_\theta} &= \cos(\frac{\theta}{2}) + \sin(\frac{\theta}{2})R(\bm{q_{sys}})\prescript{B}{}{\bm{\hat{z_B}}} \\
   \bm{\dot{q}_\theta} &= -\frac{1}{2}\sin(\frac{\theta}{2})\dot{\theta} + \frac{1}{2}\cos(\frac{\theta}{2})\dot{\theta}R(\bm{q_{sys}})\prescript{B}{}{\bm{\hat{z_B}}} + \sin{(\frac{\theta}{2})}\dot{R(\bm{q_{sys}})} \prescript{B}{}{\bm{\hat{z_B}}}
@@ -302,33 +316,4 @@ We have our state evolution equations as
 
 \subsection{Matlab Implementation}
 Implementing the systems of equations in (16), and solve for $\bm{\ddot{p}},\bm{\ddot{q}}, \ddot{\theta}$ given $\bm{\dot{p}},\bm{\dot{q}}, \dot{\theta},\bm{p},\bm{q}, \theta$ in Matlab doesn't yield a solution. There must be something wrong with the equations / the implementation.
-
-\section{Simulation}
-
-\section{Spinning mass design and Mouting module}
-\textbf{Design}
-	In order to controll the the direction 	
-  - How we come up with the off-center mass design?
-	+ why use the motor we chose? Light, pwm controllable speed
-  - What are some challenges in designing the off center mass?
-	+ maximum load
-	+ the hole that goes in the motor
-	+ mount it stably on the quad
-\section{Motors and Control circuit}
-\textbf{WORK ON THIS ANGEL!!!}
-\textbf{WORK ON THIS AMir!!!}
-  - The more technical part of the controller
-	+ PWM
-	+ SMD soldering
-	+ Parallel battery source
-\section{Quadcopter Hacking}
-not successful    
-\section{Results}
-  - Simulation and Mathematical Model suggest it may work
-  - Limitation in physical implementation may be the cause of unideal results
-\section{Further Work}  
-\section{Conclusion}
-  - Our implementation has a lot of limitation: given the short amount of time we had
-  - Proof of concept in Math Model / Simulation
-\section{Reference}
 \end{document}
