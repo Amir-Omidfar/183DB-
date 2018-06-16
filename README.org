@@ -10,6 +10,9 @@
    - [[wait to be upload][Final Documentation]]
 * Mathematical Model  
   Using Newton's fundamental law of physics, we are able to derive systems of equations that characterize the dynamics of our system. However, due to the complexity introduced by rotational acceleration, even in quaternion, no close-solution in the form of $\dot{s} = f(s)$ is analytically derived. Moreover, solving the equations in the form $f(\dot{s},s)$ numerically in Matlab yields no solutions.
+  - Entire Derivation
+  - List of equations
+
 * Simulation
 * Motor Exploration  
   - video link
