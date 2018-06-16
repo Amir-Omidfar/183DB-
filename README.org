@@ -91,7 +91,8 @@
   - All the equations we dervied
   - Implement these equations in matlab and solve 
 ** Simulation
-  - May want to work further
+  - How did we build the 3D structure
+  - How did we make dynamic simulation using simulink
 ** Controller Design and Mounting
   - How we come up with the off-center mass design?
 	+ why use the motor we chose? Light, pwm controllable speed
