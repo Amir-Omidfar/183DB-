@@ -91,7 +91,6 @@
   - All the equations we dervied
   - Implement these equations in matlab and solve 
 ** Simulation
-  - Lin?
   - May want to work further
 ** Controller Design and Mounting
   - How we come up with the off-center mass design?
