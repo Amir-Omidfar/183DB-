@@ -22,9 +22,9 @@
   |------+---------------------------------------------------------------------|
   |    1 | [[https://youtu.be/7awN_Fga4PQ][CF quadcopter First test]]                                            |
   |    2 | [[https://youtu.be/i5cuPygJWJk][Control CF2 using PS4 controller]]                                    |
-  |    3 | [[https://www.youtube.com/watch?v=kcwpM1wRnxU&feature=youtu.be][3D simulation --- quadcopter with spinning mas]]                      |
+  |    3 | [[https://www.youtube.com/watch?v=kcwpM1wRnxU&feature=youtu.be][3D simulation [part 1] --- quadcopter with spinning mas]]                      |
   |    4 | [[https://youtu.be/V58xpIB7BX8][Quadcopter motor test]]                                               |
-  |    5 | 3D simulation [[https://www.youtube.com/watch?v=YP-726upKFU][part 1]] & [[https://www.youtube.com/watch?v=o9f2x5YUPoA&t=1s][part 2]] & [[https://www.youtube.com/watch?v=nTm2-kypBXU&feature=youtu.be][controller motor test with H-bridge]] |
+  |    5 | 3D simulation [[https://www.youtube.com/watch?v=o9f2x5YUPoA&t=1s][part 2]] & [[https://www.youtube.com/watch?v=nTm2-kypBXU&feature=youtu.be][controller motor test with H-bridge]] |
   |    6 | [[https://youtu.be/SJowaesDsbo][3D printed arm test]]                                                 |
   |    7 | [[https://www.youtube.com/watch?v=24vi_tD_O_k&feature=youtu.be][Encoder of controller test]]                                          |
   |    8 | [[Controlle motor ][CF2 PWM pin control motor]] & [[https://www.youtube.com/watch?v=d_Ma3YFCfu8&feature=youtu.be][Quad-Controller all-in-one test]]         |
