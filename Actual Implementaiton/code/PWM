@@ -1,0 +1,86 @@
+#include "deck.h"
+#include "debug.h"
+
+/* ST includes */
+#include "stm32f4xx.h"
+#include "stm32f4xx_gpio.h"
+#include "stm32f4xx_rcc.h"
+#include "stm32f4xx_tim.h"
+
+/*Predefined macros*/
+#define IR_TX_CARRIER_FREQ			56000
+#define IR_TX_CARRIER_PWM_PERIOD	(SystemCoreClock/IR_TX_CARRIER_FREQ)
+#define IR_TX_DELAY_PRESCALER		(84-1)
+#define ENABLE 		1
+#define IR_TX_CARRIER_TIMER                   TIM10
+#define IR_TX_CARRIER_TIMER_RCC               RCC_APB2Periph_TIM10
+#define IR_TX_CARRIER_TIMER_CH_Init           TIM_OC1Init
+#define IR_TX_CARRIER_TIMER_CH_PreloadConfig  TIM_OC1PreloadConfig
+#define IR_TX_CARRIER_TIMER_CH_SetCompare     TIM_SetCompare1
+#define IR_TX_CARRIER_RCC                     RCC_AHB1Periph_GPIOB
+#define IR_TX_CARRIER_PORT                    GPIOB
+#define IR_TX_CARRIER_PIN                     GPIO_Pin_8
+
+void pwmInit(DeckInfo *info)
+{
+	  DEBUG_PRINT("PWM Inited.\n");
+	  TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
+	  TIM_OCInitTypeDef  TIM_OCInitStructure;
+	  GPIO_InitTypeDef GPIO_InitStructure;
+
+	  RCC_AHB1PeriphClockCmd(0x00000002, ENABLE);
+	  RCC_APB2PeriphClockCmd(0x00020000, ENABLE);
+
+	  // Configure the GPIO for the timer output
+	  GPIO_StructInit(&GPIO_InitStructure);
+	  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+	  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+	  GPIO_InitStructure.GPIO_Pin = 0x0100;
+	  GPIO_Init(((GPIO_TypeDef *) ((0x40000000 + 0x00020000) + 0x0400)), &GPIO_InitStructure);
+
+	  GPIO_PinAFConfig(((GPIO_TypeDef *) ((0x40000000 + 0x00020000) + 0x0400)), 0x08, 0x03);
+
+	  // Time base configuration
+	  TIM_TimeBaseStructInit(&TIM_TimeBaseStructure);
+	  TIM_TimeBaseStructure.TIM_Period = 9881;
+	  TIM_TimeBaseStructure.TIM_Prescaler = 0;
+	  TIM_TimeBaseStructure.TIM_ClockDivision = 0;
+	  TIM_TimeBaseStructure.TIM_CounterMode = (0x0000);
+	  TIM_TimeBaseInit(((TIM_TypeDef *) ((0x40000000 + 0x00010000) + 0x4400)), &TIM_TimeBaseStructure);
+
+	  // PWM channel configuration
+	  TIM_OCStructInit(&TIM_OCInitStructure);
+	  TIM_OCInitStructure.TIM_OCMode = 0x0060;
+	  TIM_OCInitStructure.TIM_OutputState = 0x0001;
+	  TIM_OCInitStructure.TIM_Pulse = 0;
+	  TIM_OCInitStructure.TIM_OCPolarity = 0x0000;
+	  //TIM_OCInitStructure.TIM_OCIdleState = TIM_OCIdleState_Reset;
+
+	  // Configure Output Compare for PWM
+	  IR_TX_CARRIER_TIMER_CH_Init(((TIM_TypeDef *) ((0x40000000 + 0x00010000) + 0x4400)), &TIM_OCInitStructure);
+	  IR_TX_CARRIER_TIMER_CH_PreloadConfig(((TIM_TypeDef *) ((0x40000000 + 0x00010000) + 0x4400)), 0x0008);
+
+	  TIM_ARRPreloadConfig(((TIM_TypeDef *) ((0x40000000 + 0x00010000) + 0x4400)), 1);
+	  TIM_Cmd(((TIM_TypeDef *) ((0x40000000 + 0x00010000) + 0x4400)), ENABLE);
+
+	  ((TIM_TypeDef *) ((0x40000000 + 0x00010000) + 0x4400))->CCR1 = 50*(9881/100);
+
+}
+
+bool pwmTest()
+{
+	DEBUG_PRINT("PWM initlized successfully. \n");
+	return 1;
+}
+
+const DeckDriver pwm_ir = {
+	.vid = 0,
+	.pid = 0,
+	//.usedPeriph = DECK_USING_TIMER10,
+	//.usedGpio = DECK_USING_IO_1,
+	.name = "myPWM",
+	.init = pwmInit,
+	.test = pwmTest,
+};
+
+DECK_DRIVER(pwm_ir);
