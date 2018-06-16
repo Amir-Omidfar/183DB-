@@ -14,7 +14,8 @@
   - [[https://github.com/Amir-Omidfar/183DB-/blob/master/Mathematical%2520Model/equations.pdf][List of equations]]
 * Simulation
 * Motor Exploration  
-  - video link
+  - Simulation Demo:
+  [[https://youtu.be/-pxAeULueiw][Simulink 3D Motor Demo]]
 * Actual Implementation
   - video link
 * List of video demos
