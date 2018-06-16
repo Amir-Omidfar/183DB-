@@ -37,7 +37,7 @@
   - [[https://ocw.mit.edu/courses/mechanical-engineering/2-003sc-engineering-dynamics-fall-2011/newton2019s-laws-vectors-and-reference-frames/][mit dynamic course]]
   - [[http://www.es.ele.tue.nl/education/5HC99/wiki/images/4/42/RigidBodyDynamics.pdf][Inertial/Body frame, Rotation Matrix]]
 ** Goal / Tasks
-  - WE NEED TO START ORDERING SHIT
+  - WE NEED TO START ORDERING
   - ALWAYS GO TO OFFICE HOURS
 ** Mathematical Derivation
   - Size of the current quadcopter
