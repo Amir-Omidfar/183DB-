@@ -6,8 +6,8 @@
    We aim to explore an alternative way to steer flying vehicles with underactuated controller. Taking the motivation from modern rocket control, we are going to implement such controller in a quadcopter and explore the possibilities of such control. We hope to extend such controller to steer rockets in a more cost and energy efficient manner.
 
    For a brief summary of our project, check out the following:
-   - [[https://github.com/Amir-Omidfar/183DB-/blob/master/Documentation/main.pdf][Final Documentation]]
-   - [[https://github.com/Amir-Omidfar/183DB-/blob/master/FInal%2520Report.pdf][https://github.com/Amir-Omidfar/183DB-/blob/master/FInal%20Report.pdf]]
+   - [[https://github.com/Amir-Omidfar/183DB-/blob/master/final_presentation.pdf][Final Presentation]]
+   - [[https://github.com/Amir-Omidfar/183DB-/blob/master/final_paper.pdf][Final Paper]]
 
 
 * Mathematical Model  
