@@ -7,7 +7,7 @@
 
    For a brief summary of our project, check out the following:
    - [[https://github.com/Amir-Omidfar/183DB-/blob/master/Documentation/main.pdf][Final Documentation]]
-   - [[https://github.com/Amir-Omidfar/183DB-/blob/master/FInal%2520Report.pdf][Final Presentation]]
+   - [[https://github.com/Amir-Omidfar/183DB-/blob/master/FInal%2520Report.pdf][https://github.com/Amir-Omidfar/183DB-/blob/master/FInal%20Report.pdf]]
 
 
 * Mathematical Model  
